@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
               echo "testing"
-              sh 'ls'
+              sh 'pwd'
             }
         }
         stage('Deploy') {
@@ -13,7 +13,7 @@ pipeline {
               sh '''
 		  for f in *.json; do
                   echo "Deploying file $f";
-                  ctm deploy $f;
+                 # curl -k -H "Authorization: Bearer $token" -X POST -F "definitionsFile=@/home/nulty/controlm_changes/$f" "$endpoint/deploy
                   done
 	      '''
             }

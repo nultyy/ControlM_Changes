@@ -20,7 +20,7 @@
                 "mailToTeam": {
                     "Type": "Mail",
                     "Message": "%%JOBNAME failed",
-                    "To": "team@mycomp.com"
+                    "To": "thomas.nulty@accenture.com"
                 }
             }
         }
