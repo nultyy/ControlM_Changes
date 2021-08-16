@@ -11,7 +11,8 @@ pipeline {
         stage('Deploy') {
             steps {
               sh '''
-		  for f in *.json; do
+		  ./create_ctm_session.sh
+                  for f in *.json; do
                   echo "Deploying file $f";
                  # curl -k -H "Authorization: Bearer $token" -X POST -F "definitionsFile=@/home/nulty/controlm_changes/$f" "$endpoint/deploy
                   done
