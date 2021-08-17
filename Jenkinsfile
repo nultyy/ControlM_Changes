@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
               sh '''
-		  ./create_ctm_session.sh
+		  ./create_ctm_session_jenkins.sh
                   for f in *.json; do
                   echo "Deploying file $f";
                  # curl -k -H "Authorization: Bearer $token" -X POST -F "definitionsFile=@/home/nulty/controlm_changes/$f" "$endpoint/deploy
